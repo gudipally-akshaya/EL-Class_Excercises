@@ -1,0 +1,16 @@
+<html>
+<head>
+    <title>My Web Page</title>
+</head>
+<body>
+    <h1>Working with DOM Methods</h1>
+    <input type="text" id="myInput" placeholder="Type something...">
+    <button onclick="click_button()">Click Me</button>
+    <script>
+        function click_button() {
+            var inputValue = document.getElementById("myInput").innerText;
+            alert(inputValue + " Welcome to my page");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+class Employee{
+    //Data members
+    String name;
+    int age;
+    long mdn;
+    
+    Employee()
+    {
+        name="KMCE";
+        age=3;
+        mdn=12345678;
+        System.out.println("Constructor called");
+    }
+    
+    //Parametrized Constructor
+    Employee(String pname){
+        System.out.println("Constructor with one param");
+        this.name=pname;
+    }
+    
+    //paramterized Constructor with 2 paramenters
+    Employee(String pname,int page){
+        System.out.println("Constructor with two param");
+        this.name=pname;
+        this.age=page;
+    }
+    
+    //paramterized Constructor with 2 paramenters
+    Employee(int page,int pmdn){
+        System.out.println("Constructor with two int and long param");
+        this.mdn=pmdn;
+        this.age=page;
+    }
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+    Employee(String pname,int page,int pmdn){
+        System.out.println("Constructor with String,int and param");
+        this.name=pname;
+        this.mdn=pmdn;
+        this.age=page;
+    }
+    //Methods
+    //access-specifier return_type method_name(param_list){
+        //}
+    //Default -access
+    void develop_App(){
+        System.out.println("Develop App called");
+    }
+    
+    void test_App(){
+        System.out.println("Test App called");
+    }
+}
+class Test
+{
+    public static void main(String[] args){
+        System.out.println("Hello World!!!");
+        
+        //Object reference
+        Employee eobj;
+        eobj=new Employee();//Create an object
+        
+        System.out.println("Name: "+eobj.name);
+        System.out.println("Age: "+eobj.age);
+        
+        Employee eobj1=new Employee();
+        eobj1.name="KMIT";
+        eobj1.age=18;
+        eobj.mdn=1234567;
+        
+        System.out.println("Name: "+eobj1.name);
+        System.out.println("Age: "+eobj1.age);
+        
+        Employee eobj2=new Employee("KMEC");
+        System.out.println("Name: "+eobj2.name);
+        
+        Employee eobj3=new Employee("Akshaya",18);
+        System.out.println("Name: "+eobj3.name);
+        System.out.println("Age: "+eobj3.age);
+        
+        Employee eobj4=new Employee(18,1234567);
+        System.out.println("Age: "+eobj4.age);
+        System.out.println("Mdn: "+eobj4.mdn);
+        
+        Employee eobj5=new Employee("Akshaya",18,1234567);
+        System.out.println("Name: "+eobj5.name);
+        System.out.println("Age: "+eobj5.age);
+        System.out.println("Mdn: "+eobj5.mdn);
+        
+        /*eobj.develop_App();
+        eobj.test_App();*/
+    }
+}
